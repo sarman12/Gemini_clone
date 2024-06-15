@@ -6,7 +6,6 @@
     position: relative;
 }
 .main .nav{
-    width: 100%;
     /* border: 2px red solid; */
     display: flex;
     align-items: center;
@@ -16,6 +15,8 @@
 
 }
 .main .nav img{
+    position: fixed;
+    right: 10rem;
     width: 40px;
     border-radius: 2rem;
 }
@@ -172,4 +173,56 @@
     border-radius: 1rem;
     width: 900px;
     height:auto
+}
+.btn{
+    position: fixed;
+    right: 6rem;
+    /* border: 1px solid red; */
+    padding: 0.3rem;
+    display: flex;
+    gap: 10px;
+    
+}
+.btn button{
+    cursor: pointer;
+    border: 1px rgb(0, 0, 0) solid;    
+    font-weight: 800;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    background-color: black;
+    transition: 0.3s;
+}
+.btn button:hover{
+    scale: 1.1;
+    color: black;
+    background-color: whitesmoke;
+    border: 1px black solid;
+}
+.dark-mode{
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    border: 1px black solid;
+    width: 70px;
+    height:2rem;
+    border-radius: 1rem;
+    background-color: blue;
+}
+.animation{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+    animation: darkmode 1 liner;
+}
+@keyframes darkmode {
+    0%{
+        background-position: -20px 0px;
+    }
+    
 }

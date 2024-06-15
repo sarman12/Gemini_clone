@@ -1,14 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './Main.css'
 import {assets} from '../../assets/assets/assets'
 import { Context } from '../../context/Context'
 const Main = () => {
   const {previousprompt,setPreviousPrompt,onsent,setRecentPrompt,recentprompt,showPrompt,loading,resultdata,input,setInput} = useContext(Context)
+  const [signin,setSignin]=useState(false);
+
   return (
     <div className="main">
       <div className="nav">
         <p>Gemini</p>
-        <img src={assets.arman}  alt="" />
+        <div className="dark-mode">
+          <div className="animation">
+          </div>
+        </div>
+        {signin? <img src={assets.arman}  alt="" />:<div className="btn">
+          <button>Sign Up</button>
+          <button>Log In</button>
+        </div>}
+        
       </div>
       <div className="main-container">
       {!showPrompt?
